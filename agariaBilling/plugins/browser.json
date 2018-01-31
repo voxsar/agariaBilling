@@ -1,0 +1,21 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.agaria.agariaBilling"
+    },
+    "cordova-plugin-browsersync": {
+      "PACKAGE_NAME": "org.agaria.agariaBilling"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "org.agaria.agariaBilling"
+    }
+  },
+  "dependent_plugins": {}
+}
