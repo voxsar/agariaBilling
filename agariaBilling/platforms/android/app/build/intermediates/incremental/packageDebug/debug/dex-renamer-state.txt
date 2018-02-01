@@ -1,0 +1,4 @@
+#Thu Feb 01 17:41:24 IST 2018
+base.0=C\:\\wamp\\www\\agaria\\agariaBilling\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=C\:\\wamp\\www\\agaria\\agariaBilling\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
