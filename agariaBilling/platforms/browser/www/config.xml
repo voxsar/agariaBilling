@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="org.agaria.agariaBilling" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>agariaBilling</name>
+    <name>agrariaBilling</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        E Billing and Innvoice Management
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        Agraria Development Team
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -15,4 +15,10 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="SplashScreen" value="./img/screen-hdpi-portrait.png" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenBackgroundColor" value="#05a967" />
+    <preference name="ShowSplashScreen" value="true" />
+    <preference name="SplashScreenWidth" value="315" />
+    <preference name="SplashScreenHeight" value="315" />
 </widget>
