@@ -7,7 +7,7 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Agraria Development Team
     </author>
-    <content src="index.html" />
+    <content src="browser-sync-start.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -21,4 +21,5 @@
     <preference name="ShowSplashScreen" value="true" />
     <preference name="SplashScreenWidth" value="315" />
     <preference name="SplashScreenHeight" value="315" />
+    <allow-navigation href="*" />
 </widget>
