@@ -64,7 +64,7 @@ matrix:
         #- cordova build
       script:
         - echo y | sudo cordova platform add ios --no-insight
-        - sudo cordova build ios --release --no-insight
+        - sudo cordova build ios --device --release --no-insight
       release:
         - exit 0
       before_deploy:
