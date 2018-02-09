@@ -21,9 +21,9 @@ matrix:
         - sudo npm cache clean
         - sudo npm install -g cordova
         - echo y | android update sdk -u --filter android-22,android-26
-        - sudo npm cache clean -f
-        - sudo npm install -g n
-        - sudo n stable
+        #- sudo npm cache clean -f
+        #- sudo npm install -g n
+        #- sudo n stable
         #- cordova build
       script:
         #- sudo cordova prepare
@@ -38,7 +38,7 @@ matrix:
         skip-cleanup: true
         api_key:
           secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
-        file: $TRAVIS_BUILD_DIR
+        file: $TRAVIS_BUILD_DIR/app-release-unsigned.apk
         name: "v $TRAVIS_BUILD_NUMBER"
         body: "Released on successfull build on Travis CI via deployment contains the Android APK unsigned for testing"
         draft: true
