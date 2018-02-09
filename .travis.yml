@@ -35,7 +35,8 @@ matrix:
       deploy:
         provider: releases
         skip-cleanup: true
-        github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
+        api_key:
+          secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
         file: "/rotaract3220/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
         keep-history: true
         on:
@@ -69,7 +70,8 @@ matrix:
       deploy:
         provider: releases
         skip-cleanup: true
-        github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
+        api_key:
+          secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
         file: "/rotaract3220/platforms/ios/build/emulator/Rotaract3220.app"
         keep-history: true
         on:
