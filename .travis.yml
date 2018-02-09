@@ -39,7 +39,7 @@ matrix:
         api_key:
           secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
         file: $TRAVIS_BUILD_DIR
-        name: "v" + $TRAVIS_BUILD_NUMBER
+        name: "v $TRAVIS_BUILD_NUMBER"
         body: "Released on successfull build on Travis CI via deployment contains the Android APK unsigned for testing"
         draft: true
         keep-history: true
