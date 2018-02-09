@@ -21,9 +21,9 @@ matrix:
         - sudo npm cache clean
         - sudo npm install -g cordova
         - echo y | android update sdk -u --filter android-22,android-26
-        #- sudo npm cache clean -f
-        #- sudo npm install -g n
-        #- sudo n stable
+        - sudo npm cache clean -f
+        - sudo npm install -g n
+        - sudo n stable
         #- cordova build
       script:
         #- sudo cordova prepare
