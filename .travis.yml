@@ -32,12 +32,13 @@ matrix:
         - exit 0
       before_deploy:
         - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+        - cp "/home/travis/build/voxsar/agariaBilling/agariaBilling/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk" $TRAVIS_BUILD_DIR
       deploy:
         provider: releases
         skip-cleanup: true
         api_key:
           secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
-        file: "/rotaract3220/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
+        file: "/home/travis/build/voxsar/agariaBilling/agariaBilling/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
         keep-history: true
         on:
           branch: master
