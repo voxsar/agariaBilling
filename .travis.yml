@@ -32,7 +32,7 @@ matrix:
         - exit 0
       before_deploy:
         - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-        - cp "/home/travis/build/voxsar/agariaBilling/agariaBilling/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk" $TRAVIS_BUILD_DIR
+        - cp -R "/home/travis/build/voxsar/agariaBilling/agariaBilling/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk" $TRAVIS_BUILD_DIR
       deploy:
         provider: releases
         skip-cleanup: true
