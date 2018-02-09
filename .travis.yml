@@ -24,7 +24,7 @@ matrix:
         - sudo npm cache clean -f
         - sudo npm install -g n
         - sudo n stable
-        - cordova build
+        #- cordova build
       script:
         #- sudo cordova prepare
         - sudo cordova build android --release
@@ -38,7 +38,10 @@ matrix:
         skip-cleanup: true
         api_key:
           secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
-        file: "/home/travis/build/voxsar/agariaBilling/agariaBilling/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
+        file: $TRAVIS_BUILD_DIR
+        name: "v" + $TRAVIS_BUILD_NUMBER
+        body: "Released on successfull build on Travis CI via deployment contains the Android APK unsigned for testing"
+        draft: true
         keep-history: true
         on:
           branch: master
