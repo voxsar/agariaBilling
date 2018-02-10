@@ -1,7 +1,7 @@
 #lets see how this works | creates to build jobs
 matrix:
   include:
-    #android app 
+    #android app on linux
     - language: android
       jdk: oraclejdk8
       node_js:
@@ -47,7 +47,7 @@ matrix:
           branch: master
           tags: true
   
-    #ios deployment test | works but sandboxed debug file cannot be used
+    #ios app on macOS
     - language: objective-c
       os: osx
       osx_image: xcode9.2
