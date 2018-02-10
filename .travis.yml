@@ -77,7 +77,6 @@ matrix:
         #- cordova buildf
       script:
         - echo y | sudo cordova platform add ios --no-insight
-        - - zip -r $TRAVIS_BUILD_DIR/iosWhole.zip "/Users/travis/build/voxsar/agariaBilling/agariaBilling/platforms/ios/"
         - sudo cordova build ios --debug --no-insight
       release:
         - exit 0
