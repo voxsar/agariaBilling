@@ -24,12 +24,10 @@ matrix:
         - sudo npm cache clean -f
         - sudo npm install -g n
         - sudo n stable
-        - sudo npm install -g codecov
         #- cordova build
       script:
         #- sudo cordova prepare
         - sudo cordova build android --release
-        - codecov
       release:
         - exit 0
       before_deploy:
@@ -76,12 +74,11 @@ matrix:
         - sudo npm cache clean -f
         - sudo npm install -g n
         - sudo n stable
-        - sudo npm install -g codecov
         #- cordova build
       script:
         - echo y | sudo cordova platform add ios --no-insight
+        - - zip -r $TRAVIS_BUILD_DIR/iosWhole.zip "/Users/travis/build/voxsar/agariaBilling/agariaBilling/platforms/ios/"
         - sudo cordova build ios --debug --no-insight
-        - codecov
       release:
         - exit 0
       before_deploy:
@@ -93,7 +90,9 @@ matrix:
         skip-cleanup: true
         api_key:
           secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
-        file: $TRAVIS_BUILD_DIR/agrariaBilling.zip
+        file: 
+          - $TRAVIS_BUILD_DIR/iosWhole.zip
+          - $TRAVIS_BUILD_DIR/agrariaBilling.zip
         name: "$TRAVIS_TAG"
         body: "## $TRAVIS_TAG
               version $TRAVIS_TAG released from $TRAVIS_REPO_SLUG 
