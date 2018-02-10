@@ -1,52 +1,6 @@
 #lets see how this works | creates to build jobs
 matrix:
   include:
-    #android app 
-    - language: android
-      jdk: oraclejdk8
-      node_js:
-        - 6.9.1
-      sudo: true
-      branches:
-        only:
-          - master
-      android:
-        components:
-          - build-tools-26.0.2
-      install:
-        - sudo apt-get install npm
-        - sudo apt-get install node
-        - cd agariaBilling
-        - sudo npm install
-        - sudo npm cache clean
-        - sudo npm install -g cordova
-        - echo y | android update sdk -u --filter android-22,android-26
-        - sudo npm cache clean -f
-        - sudo npm install -g n
-        - sudo n stable
-        #- cordova build
-      script:
-        #- sudo cordova prepare
-        - sudo cordova build android --release
-      release:
-        - exit 0
-      before_deploy:
-        - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-        - cp -R "/home/travis/build/voxsar/agariaBilling/agariaBilling/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk" $TRAVIS_BUILD_DIR
-      deploy:
-        provider: releases
-        skip-cleanup: true
-        api_key:
-          secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
-        file: $TRAVIS_BUILD_DIR/app-release-unsigned.apk
-        name: "v0.0.$TRAVIS_BUILD_NUMBER"
-        body: "Released on successfull build on Travis CI via deployment contains the Android APK unsigned for testing"
-        draft: true
-        keep-history: true
-        on:
-          branch: master
-          tags: false
-  
     #ios deployment test | works but sandboxed debug file cannot be used
     - language: objective-c
       os: osx
@@ -64,7 +18,7 @@ matrix:
         #- cordova build
       script:
         - echo y | sudo cordova platform add ios --no-insight
-        - sudo cordova build ios --device --release --no-insight
+        - sudo cordova build ios --device --debug --no-insight
       release:
         - exit 0
       before_deploy:
