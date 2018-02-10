@@ -56,4 +56,4 @@ deploy:
   artifact: C:\projects\agariaBilling\agariaBilling\platforms\windows\AppPackages\CordovaApp.Windows10_1.0.0.0_anycpu_debug_Test\CordovaApp.Windows10_1.0.0.0_anycpu_debug.appx
   prerelease: false
   on:
-branch: master                 # release from master branch only
+    branch: master                 # release from master branch only
