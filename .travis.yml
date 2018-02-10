@@ -23,7 +23,8 @@ matrix:
         - exit 0
       before_deploy:
         - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-        - cp "/Users/travis/build/voxsar/agariaBilling/agariaBilling/platforms/ios/build/emulator/agrariaBilling.app" $TRAVIS_BUILD_DIR
+        - zip -r $TRAVIS_BUILD_DIR/agrariaBilling.zip "/Users/travis/build/voxsar/agariaBilling/agariaBilling/platforms/ios/build/emulator/agrariaBilling.app"
+       # - cp "/Users/travis/build/voxsar/agariaBilling/agariaBilling/platforms/ios/build/emulator/agrariaBilling.app" $TRAVIS_BUILD_DIR
       deploy:
         provider: releases
         skip-cleanup: true
