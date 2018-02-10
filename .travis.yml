@@ -39,7 +39,7 @@ matrix:
         api_key:
           secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
         file: $TRAVIS_BUILD_DIR/app-release-unsigned.apk
-        name: "v0.0.$TRAVIS_BUILD_NUMBER"
+        name: "$TRAVIS_TAG"
         body: "v0.0.$TRAVIS_BUILD_NUMBER released via Travis CI after successfull android build ($TRAVIS_OS_NAME) build initated by commit $TRAVIS_COMMIT"
         draft: true
         keep-history: true
@@ -77,7 +77,7 @@ matrix:
         api_key:
           secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
         file: $TRAVIS_BUILD_DIR/agrariaBilling.zip
-        name: "v0.0.$TRAVIS_BUILD_NUMBER"
+        name: "$TRAVIS_TAG"
         body: "Released on successfull build on Travis CI via deployment contains the iOS APK unsigned for testing"
         draft: true
         keep-history: true
