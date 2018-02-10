@@ -39,6 +39,8 @@ install:
   - cmd: copy C:\projects\agariaBilling\agariaBilling\platforms\windows\AppPackages\CordovaApp.Windows10_1.0.0.0_anycpu_debug_Test\CordovaApp.Windows10_1.0.0.0_anycpu_debug.appx C:\projects\agariaBilling
 build:
     project: C:\projects\agariaBilling\agariaBilling\platforms\windows\CordovaApp.Windows10.jsproj
+build_script:
+  - cmd: 'cmd: cordova build windows -- --appx=uap'
 test: off
 artifacts:
   - path: CordovaApp.Windows10_1.0.0.0_AnyCPU_Debug.appx
@@ -51,6 +53,7 @@ deploy:
     secure: c/lXAytCIOqiw0TYXn2QtcrMzjhSWbE0wO9M2CJiOy2v2QoS2aMWB4zTV2Ud6xbB # your encrypted token from GitHub
     #/.*\.appx/            # upload all NuGet packages to release assets
   draft: true
+  artifact: C:\projects\agariaBilling\agariaBilling\platforms\windows\AppPackages\CordovaApp.Windows10_1.0.0.0_anycpu_debug_Test\CordovaApp.Windows10_1.0.0.0_anycpu_debug.appx
   prerelease: false
   on:
 branch: master                 # release from master branch only
