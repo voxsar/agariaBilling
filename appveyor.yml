@@ -24,7 +24,7 @@ image: Visual Studio 2017
 environment:
   nodejs_version: "6"
 
-# scripts that run after cloning repositorys
+# scripts that run after cloning repositorys s
 install:
   # by default, all script lines are interpreted as batch
   - echo This is batch
