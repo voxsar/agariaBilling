@@ -31,7 +31,7 @@ matrix:
       release:
         - exit 0
       before_deploy:
-        - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+        #- git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
         - cp -R "/home/travis/build/voxsar/agariaBilling/agariaBilling/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk" $TRAVIS_BUILD_DIR
       deploy:
         provider: releases
@@ -40,7 +40,7 @@ matrix:
           secure: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure GITHUB_TOKEN
         file: $TRAVIS_BUILD_DIR/app-release-unsigned.apk
         name: "v0.0.$TRAVIS_BUILD_NUMBER"
-        body: "Released on successfull build on Travis CI via deployment contains the Android APK unsigned for testing"
+        body: "v0.0.$TRAVIS_BUILD_NUMBER released via Travis CI after successfull android build ($TRAVIS_OS_NAME) build initated by commit $TRAVIS_COMMIT"
         draft: true
         keep-history: true
         on:
@@ -68,7 +68,7 @@ matrix:
       release:
         - exit 0
       before_deploy:
-        - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+        #- git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
         - zip -r $TRAVIS_BUILD_DIR/agrariaBilling.zip "/Users/travis/build/voxsar/agariaBilling/agariaBilling/platforms/ios/build/emulator/agrariaBilling.app"
        # - cp "/Users/travis/build/voxsar/agariaBilling/agariaBilling/platforms/ios/build/emulator/agrariaBilling.app" $TRAVIS_BUILD_DIR
       deploy:
