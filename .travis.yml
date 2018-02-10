@@ -24,10 +24,12 @@ matrix:
         - sudo npm cache clean -f
         - sudo npm install -g n
         - sudo n stable
+        - sudo npm install -g codecov
         #- cordova build
       script:
         #- sudo cordova prepare
         - sudo cordova build android --release
+        - codecov
       release:
         - exit 0
       before_deploy:
@@ -74,10 +76,12 @@ matrix:
         - sudo npm cache clean -f
         - sudo npm install -g n
         - sudo n stable
+        - sudo npm install -g codecov
         #- cordova build
       script:
         - echo y | sudo cordova platform add ios --no-insight
         - sudo cordova build ios --debug --no-insight
+        - codecov
       release:
         - exit 0
       before_deploy:
