@@ -40,7 +40,7 @@ install:
 build:
     project: C:\projects\agariaBilling\agariaBilling\platforms\windows\CordovaApp.Windows10.jsproj
 build_script:
-  - cmd: 'cmd: cordova build windows -- --appx=uap'
+  - cmd: cordova build windows -- --appx=uap
 test: off
 artifacts:
   - path: CordovaApp.Windows10_1.0.0.0_AnyCPU_Debug.appx
