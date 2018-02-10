@@ -41,7 +41,7 @@ matrix:
         file: $TRAVIS_BUILD_DIR/app-release-unsigned.apk
         name: "$TRAVIS_TAG"
         body: "v0.0.$TRAVIS_BUILD_NUMBER released via Travis CI after successfull android build ($TRAVIS_OS_NAME) build initated by commit $TRAVIS_COMMIT"
-        draft: true
+        draft: false
         keep-history: true
         on:
           branch: master
@@ -79,7 +79,7 @@ matrix:
         file: $TRAVIS_BUILD_DIR/agrariaBilling.zip
         name: "$TRAVIS_TAG"
         body: "Released on successfull build on Travis CI via deployment contains the iOS APK unsigned for testing"
-        draft: true
+        draft: false
         keep-history: true
         on:
           branch: master
