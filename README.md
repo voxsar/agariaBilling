@@ -1,2 +1,2 @@
-# agariaBilling [![codecov](https://codecov.io/gh/voxsar/agariaBilling/branch/master/graph/badge.svg)](https://codecov.io/gh/voxsar/agariaBilling) [![Build Status](https://travis-ci.org/voxsar/agariaBilling.svg?branch=master)](https://travis-ci.org/voxsar/agariaBilling)
+# agariaBilling [![codecov](https://codecov.io/gh/voxsar/agariaBilling/branch/master/graph/badge.svg)](https://codecov.io/gh/voxsar/agariaBilling) [![Build status](https://ci.appveyor.com/api/projects/status/bdap4333iay69740/branch/master?svg=true)](https://ci.appveyor.com/project/voxsar/agariabilling/branch/master)  [![Build Status](https://travis-ci.org/voxsar/agariaBilling.svg?branch=master)](https://travis-ci.org/voxsar/agariaBilling)
 Agaria E-Billing System for E-Billing Mobile App for everyone
